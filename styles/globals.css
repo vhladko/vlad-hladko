@@ -2,8 +2,12 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: Rubik, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #f8f9fb;
+  color: #4c566a;
 }
 
 a {
@@ -13,4 +17,33 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+blockquote {
+  border-left: 0.2em solid rgba(94, 129, 172, 0.6);
+  padding-left: 1.5em;
+  margin: 1em 0px;
+  color: #7b88a1;
+}
+
+code {
+  font-family: "Source Code Pro", monospace;
+  line-height: 1.2;
+  font-size: 0.9rem;
+}
+
+code:not(.hljs) {
+  background: #eceff4;
+  padding: 1px 3px;
+  border-radius: 3px;
+}
+
+.layout {
+  background-color: #fff;
+  padding: 10px 15px;
+  margin: 0 auto;
+  width: 1200px;
+}
+
+:root {
 }
