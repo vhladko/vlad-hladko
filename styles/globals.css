@@ -37,6 +37,7 @@ code {
   font-family: "Source Code Pro", monospace;
   line-height: 1.2;
   font-size: 0.9rem;
+  white-space: pre-wrap;
 }
 
 code:not(.hljs) {
@@ -53,4 +54,11 @@ code:not(.hljs) {
 }
 
 :root {
+}
+
+@media only screen and (max-width: 600px) {
+  .layout {
+    width: 100%;
+    padding: 5px;
+  }
 }

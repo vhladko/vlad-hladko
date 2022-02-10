@@ -52,6 +52,31 @@ You may also notice that `nonUsedClosureVariable` is not in that object. Still, 
 ### Until there is a reference to that function
 The garbage collector is responsible for keeping only needed things for your program. This means that until there is a reason to keep your function and its closure alive, GC won't remove it.
 The reason's for that may be different. You can store your function in a variable, or your function can be passed as a callback and waiting to be executed later. Because of that, you also may want to clear your references after you are done with your functions.
+
+## Example
+Let's start with a simple function that doesn't really use closure.
+```js
+function increment() {
+  let counter = 0;
+  return ++counter;
+}
+
+increment() // 1
+increment() // 1
+```
+In that case, each time you call `increment`, a brand new variable `counter` gonna be created. That's why each call returns the same value. But if we use the power of closure and change our code to:
+```js
+function incrementFunction() {
+  let counter = 0;
+  return () => ++counter;
+}
+
+let increment = incrementFunction();
+increment() //  1
+increment() //  2
+increment() //  3
+```
+Now, we closed our returned function on the `counter` variable and saved reference to it inside the `increment` variable. That means that each time we call `increment`, we will execute the same function instance and point the same `counter` variable from the hidden closure property.
 ## Use cases
 Why it's useful?
 
