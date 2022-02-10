@@ -11,8 +11,15 @@ body {
 }
 
 a {
-  color: inherit;
+  color: #7b88a1;
+  transition: color 200ms ease-in-out 0s;
   text-decoration: none;
+}
+
+a:active,
+a:focus,
+a:hover {
+  color: #4c566a;
 }
 
 * {
